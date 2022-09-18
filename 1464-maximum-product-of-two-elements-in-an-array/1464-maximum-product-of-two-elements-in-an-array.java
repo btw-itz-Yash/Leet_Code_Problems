@@ -7,10 +7,11 @@ class Solution {
             int mul=0;
             int j=0;
             while(j<n){
-                if(i!=j){
-                 mul = (nums[i]-1)*(nums[j]-1);
+                if(i!=j && nums[i]*nums[j]>max){
+                    mul = (nums[i]-1)*(nums[j]-1);
+                    max = Integer.max(max,mul);
                 }
-                max = Integer.max(max,mul);
+                
                 j++;
             }
         }
